@@ -15,6 +15,9 @@ class Vector:
     def __truediv__(self, other):
         return Vector(self.x / other.x, self.y / other.y)
     
+    def __abs__(self):
+        return (self.x ** 2 + self.y ** 2) ** 0.5
+    
     def __repr__(self):
         return f"X: {self.x}, Y: {self.y}"
     
@@ -30,3 +33,6 @@ print(v4)
 print(v5)
 print(v6)
 print(v7)
+print(v1.__abs__())
+print(v4.__abs__())
+print(v5.__abs__())
