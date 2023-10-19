@@ -53,6 +53,8 @@ def my_timer(orig_func):
         result = orig_func(*args, **kwargs)
         t2 = time.time() - t1
         print(f"\nExecuted in {t2} seconds.\n")
+        return result
+    
     return wrapper
 
 # @decorator_function
@@ -60,4 +62,4 @@ def my_timer(orig_func):
 def display_info(name, age):
     print(f"display_info function executed with '{name}' and '{age}' arguments\n")
 
-display_info("Virat", 34)
+display_info("Rohit", 35)
